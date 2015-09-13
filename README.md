@@ -1,6 +1,6 @@
 # Revealjs dockerized
 
-This docker image aims to provide an eassy way to launch a presentation build with [Reveal.js](http://lab.hakim.se/reveal-js/). It provides some options to launch a container with environment variables to set themes, plugins, title, and so on.
+This docker image aims to provide an easy way to launch a presentation build with [Reveal.js](http://lab.hakim.se/reveal-js/). It provides some options to launch a container with environment variables to set themes, plugins, title, and so on.
 
 # How to...
 
