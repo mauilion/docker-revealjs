@@ -30,7 +30,7 @@ docker run --rm -it -p 8000:8000 \
 
 ## ... change options
 
-There are several options you may pass to the container:
+There are several options you may pass to the container, all of this options should be set to container using "-e" option to set environment variable (eg. `-e THEME=night`):
 
 - `THEME`: one of the theme name (defaul: black) - see [the list of themes](https://github.com/hakimel/reveal.js/tree/master/css/theme)
 - `SLIDE`: filename of your slide in the volume
