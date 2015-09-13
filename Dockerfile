@@ -1,20 +1,21 @@
 FROM node:latest
 MAINTAINER Patrice FERLET <metal3d@gmail.com>
 
-env THEME black
-env SLIDE example.md
-env HIGHLIGHT zenburn
-env TITLE "Example slide"
-env AUTHOR ""
-env DESCRIPTION "An example slide"
-env USE_REMOTE false
-env SEPARATOR "\n---\n"
-env VERTICAL_SEPARATOR "\n----\n"
-env NOTE "^Note:"
+EXPOSE 8000
+ENV THEME black
+ENV SLIDE example.md
+ENV HIGHLIGHT zenburn
+ENV TITLE "Example slide"
+ENV AUTHOR ""
+ENV DESCRIPTION "An example slide"
+ENV USE_REMOTE false
+ENV SEPARATOR "\n---\n"
+ENV VERTICAL_SEPARATOR "\n----\n"
+ENV NOTE "^Note:"
+ENV TRANSITION slide
 
 COPY reveal.js /revealjs
 WORKDIR /revealjs
-
 
 RUN sed -i 's/"node-sass": ".*"/"node-sass": "~3.3"/'   package.json && \
     sed -i 's/"grunt-sass": ".*"/"grunt-sass": "~1.0"/' package.json && \

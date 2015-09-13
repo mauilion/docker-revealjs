@@ -42,6 +42,7 @@ There are several options you may pass to the container, all of this options sho
 - `SEPARATOR`: slide separator (default: `\n---\n`)
 - `VERTICAL_SEPARATOR`: vertical slide separator (default: `\n---\n`)
 - `NOTE`: speaker note detection (default: `^Note:`)
+- `TRANSITION`: transition style (default: slide)
 
 
  
