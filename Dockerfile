@@ -8,6 +8,9 @@ env TITLE "Example slide"
 env AUTHOR ""
 env DESCRIPTION "An example slide"
 env USE_REMOTE false
+env SEPARATOR "\n---\n"
+env VERTICAL_SEPARATOR "\n----\n"
+env NOTE "^Note:"
 
 COPY reveal.js /revealjs
 WORKDIR /revealjs

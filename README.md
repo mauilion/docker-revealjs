@@ -39,8 +39,9 @@ There are several options you may pass to the container, all of this options sho
 - `AUTHOR`: Give your name to appear in the author meta tag
 - `DESCRIPTION`: Give a description that will fill the description meta tag
 - `USE_REMOTE`: set it to "true" to allow slide control with a phone (default: false)
-
-
+- `SEPARATOR`: slide separator (default: `\n---\n`)
+- `VERTICAL_SEPARATOR`: vertical slide separator (default: `\n---\n`)
+- `NOTE`: speaker note detection (default: `^Note:`)
 
 
  
