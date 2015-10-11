@@ -1,7 +1,7 @@
 FROM node:latest
 MAINTAINER Patrice FERLET <metal3d@gmail.com>
 
-EXPOSE 8000
+EXPOSE 8000 8001
 ENV THEME black
 ENV SLIDE example.md
 ENV HIGHLIGHT zenburn
@@ -17,10 +17,11 @@ ENV TRANSITION slide
 COPY reveal.js /revealjs
 WORKDIR /revealjs
 
-RUN sed -i 's/"node-sass": ".*"/"node-sass": "~3.3"/'   package.json && \
-    sed -i 's/"grunt-sass": ".*"/"grunt-sass": "~1.0"/' package.json && \
-    npm install -g grunt-cli && \
-    npm install && \
+RUN set -xe;\ 
+    sed -i 's/"node-sass": ".*"/"node-sass": "~3.3"/'   package.json;\
+    sed -i 's/"grunt-sass": ".*"/"grunt-sass": "~1.0"/' package.json;\
+    npm install -g grunt-cli;\
+    npm install;\
     npm cache clean
 
 COPY slides /revealjs/slides
