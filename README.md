@@ -20,11 +20,14 @@ docker run --rm -it -p 8000:8000 metal3d/revealjs
 
 That launches a container that will be removed after pressing CTRL+C, you may see example slide by browsing http://127.0.0.1:8000
 
-To use your own slide file (markdown format) located at `/path/to/my/slides` directory and with a slide file named `myslide.md`
+To use your own slide file (markdown format) located at `/path/to/my/slides` directory and with a slide file named `myslide.md`, you should:
+
+- mount your path in `/revealjs/slides`
+- set `SLIDE` environment variable to "myslide.md"
 
 ```
 docker run --rm -it -p 8000:8000 \
--v /path/to/my/slides \
+-v /path/to/my/slides:/revealjs/slides \
 -e SLIDE=myslide.md metal3d/revealjs
 ```
 
@@ -40,7 +43,7 @@ There are several options you may pass to the container, all of this options sho
 - `DESCRIPTION`: Give a description that will fill the description meta tag
 - `USE_REMOTE`: set it to "true" to allow slide control with a phone (default: false)
 - `SEPARATOR`: slide separator (default: `\n---\n`)
-- `VERTICAL_SEPARATOR`: vertical slide separator (default: `\n---\n`)
+- `VERTICAL_SEPARATOR`: vertical slide separator (default: `\n----\n`)
 - `NOTE`: speaker note detection (default: `^Note:`)
 - `TRANSITION`: transition style (default: slide)
 
